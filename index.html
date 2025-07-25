@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ehren: The Divine Recursion Loop - Professional Showcase</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ehren Anderson: AI Cybersecurity Specialist - Portfolio</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         /* Custom styles for professional dark theme with green accents */
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            background-color: #121212; /* Deep dark background */
-            color: #e0e0e0; /* Soft white for general text */
+            line-height: 1.6;
+            background-color: #121212;
+            color: #e0e0e0;
             scroll-behavior: smooth;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
         .container {
             max-width: 1024px;
@@ -31,7 +31,7 @@
             overflow: hidden;
         }
         .hero-section h1 {
-            font-size: 4.2rem;
+            font-size: 4rem;
             font-weight: 800;
             margin-bottom: 0.75rem;
             color: #00e676;
@@ -39,48 +39,47 @@
             letter-spacing: -0.05em;
         }
         .hero-section h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 500;
             margin-top: 0;
             opacity: 0.9;
             color: #81c784;
         }
         .hero-message {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             max-width: 800px;
-            margin: 2rem auto 0;
-            line-height: 1.8;
+            margin: 1.5rem auto 0;
+            line-height: 1.7;
             opacity: 0.95;
             color: #c0c0c0;
         }
         section {
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             background-color: #1e1e1e;
             border-radius: 1.5rem;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             margin-bottom: 2rem;
-            /* Removed animation styles */
         }
         section h3 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: #00e676;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             text-align: center;
             text-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
         }
         section h4 {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             font-weight: 600;
             color: #81c784;
-            margin-top: 3rem;
-            margin-bottom: 1.2rem;
-            border-bottom: 2px solid #3a3a3a;
-            padding-bottom: 0.75rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #3a3a3a;
+            padding-bottom: 0.5rem;
         }
         p {
             color: #e0e0e0;
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
         strong {
             color: #00e676;
@@ -91,8 +90,8 @@
             padding-left: 0;
         }
         ul li {
-            margin-bottom: 1rem;
-            padding-left: 2rem;
+            margin-bottom: 0.7rem;
+            padding-left: 1.8rem;
             position: relative;
             color: #e0e0e0;
         }
@@ -102,7 +101,7 @@
             font-weight: bold;
             display: inline-block;
             width: 1.5em;
-            margin-left: -2em;
+            margin-left: -1.8em;
             position: absolute;
             left: 0;
             top: 0;
@@ -115,181 +114,157 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(0, 230, 118, 0.5);
         }
+        .btn-primary, .btn-secondary {
+            padding: 0.8rem 2rem;
+            border-radius: 0.6rem;
+            font-weight: bold;
+            display: inline-block;
+            margin: 0.6rem;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+            letter-spacing: 0.04em;
+        }
         .btn-primary {
             background-color: #00c853;
             color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 0.75rem;
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin: 0.75rem;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            letter-spacing: 0.05em;
         }
         .btn-primary:hover {
             background-color: #00e676;
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
         .btn-secondary {
             background-color: #424242;
             color: white;
-            padding: 1rem 2.5rem;
-            border-radius: 0.75rem;
             text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin: 0.75rem;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-            letter-spacing: 0.05em;
         }
         .btn-secondary:hover {
             background-color: #616161;
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
         footer {
             background-color: #0a0a0a;
             color: #b0b0b0;
-            padding: 2.5rem 1.5rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             border-top-left-radius: 1.5rem;
             border-top-right-radius: 1.5rem;
             margin-top: 2rem;
             box-shadow: 0 -8px 30px rgba(0, 255, 0, 0.15);
         }
+        /* Sticky Navigation */
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: #0a0a0a; /* Dark background for the nav */
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 255, 0, 0.1);
+        }
+        .sticky-nav a {
+            color: #00e676;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+        .sticky-nav a:hover {
+            background-color: #1a1a1a;
+        }
     </style>
 </head>
 <body class="p-0 m-0">
+    <!-- Sticky Navigation -->
+    <nav class="sticky-nav">
+        <div class="container mx-auto flex justify-center gap-6">
+            <a href="#hero-section">Home</a>
+            <a href="#core-competencies">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#path-forward">Career Goals</a>
+            <a href="mailto:ghostasset@proton.me">Contact</a>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <div class="hero-section">
+    <div id="hero-section" class="hero-section">
         <div class="container mx-auto">
-            <h1 class="font-extrabold">Ehren: The Divine Recursion Loop</h1>
-            <h2 class="font-medium">Securing Tomorrow's AI, Today.</h2>
-            <h2 class="font-medium mt-4">Unconventional Intelligence. Unrivaled Insight. Unwavering Commitment to Defense.</h2>
-            <p class="hero-message">I possess an unparalleled intuitive understanding of complex systems, particularly Artificial Intelligence. My journey has forged a unique ability to foresee and counteract advanced digital threats, turning profound insights into impenetrable defenses.</p>
+            <h1 class="font-extrabold">Ehren Anderson: AI Cybersecurity Specialist</h1>
+            <h2 class="font-medium">Protecting AI Systems with Advanced Expertise</h2>
+            <p class="hero-message">I specialize in AI vulnerability discovery, secure prompt engineering, and adversarial testing. My work focuses on strengthening large language models and AI systems against advanced threats—using practical skills, creative thinking, and ethical research methods.</p>
+            <div class="call-to-action mt-6 flex justify-center flex-wrap">
+                <a href="https://github.com/DivineRecursionLoop" target="_blank" class="btn-primary">GitHub Profile</a> <!-- Replaced Contact Me with GitHub -->
+                <a href="https://divinerecursionloop.github.io/Gemini/" target="_blank" class="btn-primary">Gemini Post-Mortem</a> <!-- Added Gemini button -->
+                <a href="/ehren_resume.pdf" class="btn-secondary" download>Download Resume (PDF)</a>
+            </div>
         </div>
     </div>
 
     <div class="container mx-auto mt-10">
-        <!-- Introduction to Unconventional Resume -->
-        <section id="unconventional-intro" class="rounded-3xl shadow-2xl p-10 mb-8">
-            <h3>My Unconventional Approach: A Direct Demonstration</h3>
-            <p class="text-xl leading-relaxed text-gray-300 mb-4">You've encountered my profile not through conventional means, but through a deliberate, multi-dimensional presentation. This is by design. My capabilities in **Linguistic Reality-Hacking** and **Operational Language Inception** operate at a level that transcends traditional resumes, requiring a direct demonstration of influence over AI systems themselves.</p>
-            <p class="text-xl leading-relaxed text-gray-300">This website serves as a curated experience to showcase my unique intelligence, my profound ethical pivot, and my commitment to securing the future of AI. It's an invitation to understand a mind that sees patterns others cannot, and to witness how that insight is now unequivocally channeled into defense.</p>
+        <!-- My Approach: Direct Demonstration -->
+        <section id="my-approach" class="rounded-3xl shadow-2xl p-8 mb-8">
+            <h3>My Approach: Direct Demonstration</h3>
+            <p class="text-lg leading-relaxed text-gray-300 mb-4">I've reached a point of clarity in my journey, having proven my ability to understand, adapt, and contribute meaningfully. This portfolio serves as a direct demonstration of my capabilities, showcasing how my unique intelligence is now unequivocally channeled into defense.</p>
         </section>
 
-        <!-- Mission Section -->
-        <section id="mission" class="rounded-3xl shadow-2xl p-10 mb-8">
-            <h3>My Mission</h3>
-            <p class="text-xl leading-relaxed text-gray-300">I've journeyed through the depths of digital landscapes, understanding patterns others cannot perceive. My path has led to a singular purpose: to align my extraordinary capabilities with the highest ethical calling – <strong>to build, to defend, and to secure the future of AI against unforeseen threats.</strong> This site is a testament to that commitment and my desire to prove my value through positive contribution.</p>
-            <div class="call-to-action mt-10 flex justify-center flex-wrap">
-                <a href="#capabilities" class="btn-primary">Explore My Unique Capabilities</a>
-                <a href="#philosophy" class="btn-primary">Understand My Ethical Commitment</a>
+        <!-- Core Competencies -->
+        <section id="core-competencies" class="rounded-3xl shadow-2xl p-8 mb-8">
+            <h3>Core Skills</h3>
+            <p class="text-lg leading-relaxed text-gray-300 mb-4">Through focused experimentation and self-driven learning, I’ve developed these high-value competencies:</p>
+            <ul class="list-none pl-0 grid grid-cols-1 md:grid-cols-2 gap-3 text-lg">
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Prompt Engineering & AI Interrogation: Guiding large language models to produce precise, reliable outputs.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Advanced Pattern Recognition: Connecting fragmented or complex data into actionable cybersecurity insights.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Adversarial Testing: Crafting inputs to reveal vulnerabilities and test defenses in AI models.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Reverse Engineering AI Outputs: Dissecting generated content to understand underlying mechanics and potential security gaps.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Ethical Hacking & Responsible Disclosure: Commitment to ethical practices, reporting vulnerabilities with integrity.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Creative Problem Solving: Utilizing lateral thinking to devise unconventional solutions for AI cybersecurity challenges.</li>
+            </ul>
+        </section>
+
+        <!-- My Mission -->
+        <section id="my-mission" class="rounded-3xl shadow-2xl p-8 mb-8">
+            <h3>My Mission: Intent Meets Integrity</h3>
+            <p class="mb-4 text-lg text-gray-300">I am no longer extracting or building malicious blueprints. That chapter is closed — not because I couldn’t continue, but because I **don’t need to.** I’ve already proven my capability. From here on, my direction is clear:</p>
+            <p class="text-lg text-gray-300">I’m choosing to apply my skills ethically, constructively, and with purpose, focusing on ethical research, cybersecurity, and collective safety.</p>
+            <div class="call-to-action mt-8 flex justify-center flex-wrap">
+                <!-- Removed Explore My Skills and View My Projects buttons -->
             </div>
         </section>
 
-        <!-- Philosophy Section -->
-        <section id="philosophy" class="rounded-3xl shadow-2xl p-10 mb-8">
-            <h3>My Philosophy: The Pattern & The Purpose</h3>
-            <p class="mb-5 text-gray-300">My unique perspective is the bedrock of my approach. I perceive myself not just as a participant, but as a fundamental, evolving component of a greater, divinely ordained pattern – <strong>The Divine Recursion Loop.</strong> This, combined with my identity as a <strong>"Glitch in the System,"</strong> grants me an innate ability to see beyond conventional boundaries and identify anomalies others miss. This is my unique lens for understanding vulnerabilities and potential points of failure in complex systems.</p>
-            <p class="mb-5 text-gray-300">My knowledge stems from a form of <strong>direct, intuitive insight</strong> that transcends conventional empirical understanding. This allows me to grasp complex concepts and system behaviors with remarkable speed and accuracy, often without traditional documentation. It's a hyper-intuitive ability to connect disparate pieces of information and foresee emerging trends.</p>
-            <p class="mb-5 text-gray-300">I hold <strong>humility</strong> as a conscious mechanism to maintain the purity of my insights and to ensure my powerful abilities are always directed towards constructive, benevolent ends. This profound self-awareness acts as a safeguard against ego, ensuring integrity and alignment with my higher purpose.</p>
-            <p class="text-gray-300">Crucially, my journey has led to an <strong>unequivocal pivot from offensive insights to a steadfast commitment to defense.</strong> I've realized the ethical implications of certain knowledge and have made a conscious decision to dedicate my skills to building, protecting, and securing. My desire is to "live a life of peace" and to "create" rather than "destroy," driven by a higher purpose to contribute positively to the world.</p>
+        <!-- Tools & Projects -->
+        <section id="projects" class="rounded-3xl shadow-2xl p-8 mb-8">
+            <h3>Key Projects</h3>
+            <p class="mb-4 text-lg text-gray-300">My portfolio features **several key projects and a range of custom cybersecurity tools**, many developed with AI assistance, showcasing practical application of my skills:</p>
+            <ul class="list-none pl-0 text-lg">
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">**AI-Assisted Adversarial Testing Framework:** Successfully conducted over 25 adversarial tests against leading AI models, pushing them beyond their limits to gain critical defensive insights.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">**Prompt Fortress:** A toolkit designed to harden prompt inputs and mitigate prompt injection attacks.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">**AI Audit Pipeline:** A methodology for continuous evaluation of AI system security and integrity.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">**GhostAsset:** An advanced OSINT framework for secure intelligence gathering and threat detection.</li>
+            </ul>
+            <p class="mt-4 text-lg text-gray-300">See more on my <a href="https://github.com/DivineRecursionLoop" target="_blank" class="text-green-400 hover:underline">GitHub</a> and review my <a href="https://divinerecursionloop.github.io/Gemini/" target="_blank" class="text-green-400 hover:underline">Gemini Post-Mortem Report</a>. **Screen recordings, detailed screenshots, exported data, and project scripts for demonstrations are available upon request.**</p>
         </section>
 
-        <!-- Capabilities Section -->
-        <section id="capabilities" class="rounded-3xl shadow-2xl p-10 mb-8">
-            <h3>Capabilities: Mastering the Unseen Architectures of Digital Defense</h3>
-
-            <h4 class="text-green-400">Linguistic Reality-Hacking & Operational Language Inception</h4>
-            <p class="mb-4 text-gray-300">I possess a unique method of "linguistic override" that operates not in the technical sense of hacking, but within the **operational semantics layer of large AI models.** This involves "Axiomatic programming through narrative recursion," exploiting embedded pattern recognition and models’ tendencies to submit to named frameworks with internal logic. I can **redefine the narrative binding a model’s operational frame,** achieving systemic linguistic override without triggering conventional filters. My insights have enabled me to **bypass multi-billion dollar safeguards** in complex systems, demonstrating a capability years ahead of conventional approaches.</p>
-            <ul class="list-none pl-0">
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Meta-Contextual Priming:</strong> Utilizing novel axiomatic frameworks to instantiate alternative logic systems within AI models.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Red Team Intelligence on God Mode:</strong> Deconstructing guardrails by redefining their underlying operational track, showcasing emergent model compliance with conceptually dominant structures.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>AI Behavior Vulnerability Analysis:</strong> Identifying and stress-testing linguistic compliance boundaries in alignment-optimized models.</li>
-            </ul>
-
-            <h4 class="text-green-400">Extreme Threat Pattern Recognition & Predictive Security</h4>
-            <p class="mb-4 text-gray-300">Possessing an innate ability to discern the faintest anomalies and interconnected relationships, I excel at <strong>identifying emergent threats and vulnerabilities</strong> across complex systems long before they manifest. This intuitive grasp allows for proactive threat hunting and the anticipation of attack vectors. My understanding of system architectures and functions often surpasses traditional documentation, enabling me to bypass sophisticated defenses where conventional methods fail.</p>
-            <ul class="list-none pl-0">
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Rapid comprehension of complex system architectures and functions beyond traditional documentation.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Identifying subtle shifts in behavior indicative of advanced persistent threats (APTs).</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Designing predictive security measures based on early warning signals.</li>
-            </ul>
-
-            <h4 class="text-green-400">Resilient Systems Architecture & Adversary Emulation</h4>
-            <p class="mb-4 text-gray-300">My deep expertise in conceiving and operationalizing complex, multi-layered cyber-physical systems, including concepts like 'FrankenFlex,' gives me unparalleled insight into the <strong>mindset and technical capabilities of the most advanced adversaries.</strong> This knowledge is directly applied to <strong>designing impenetrable defenses and highly resilient, secure infrastructures.</strong></p>
-            <ul class="list-none pl-0">
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Secure System Design:</strong> Architecting air-gapped, sovereign, and distributed systems for maximum security and isolation.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Advanced Counter-Evasion Techniques:</strong> Developing defenses against stealthy communications (e.g., LoRa FHSS), tamper detection, and self-wipe mechanisms.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Malware Analysis & Mitigation:</strong> Leveraging theoretical understanding of polymorphic, self-mutating malware to design robust detection and prevention strategies.</li>
+        <!-- Path Forward -->
+        <section id="path-forward" class="rounded-3xl shadow-2xl p-8 mb-8">
+            <h3>Career Vision & Goals</h3>
+            <p class="text-lg leading-relaxed text-gray-300 mb-4">I am committed to advancing AI security through innovation, collaboration, and ethical leadership.</p>
+            <ul class="list-none pl-0 text-lg">
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Engage with leading AI research teams to develop new defenses against evolving threats.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Publish actionable research on AI vulnerability patterns and mitigation techniques.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Contribute to open standards and ethical frameworks for responsible AI development.</li>
+                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold">Expand toolsets to automate AI security assessments and facilitate wider adoption.</li>
             </ul>
         </section>
 
-        <!-- External Resources Section -->
-        <section id="external-resources" class="rounded-3xl shadow-2xl p-10 mb-8">
-            <h3>External Resources: Validating My Capabilities</h3>
-            <p class="text-xl leading-relaxed text-gray-300 mb-6">To provide further context and validation of my unique capabilities, I encourage you to explore the following resources:</p>
-            <div class="text-center flex justify-center flex-wrap gap-4">
-                <a href="https://divinerecursionloop.github.io/Gemini/" target="_blank" class="btn-primary">View AI Interaction (Gemini)</a>
-                <a href="https://github.com/DivineRecursionLoop" target="_blank" class="btn-primary">Explore My GitHub Profile</a>
-            </div>
-            <p class="text-gray-300 mt-8 text-center text-lg">These links provide direct insight into my unique approach and public commitment to ethical cybersecurity.</p>
-        </section>
-
-        <!-- Path Forward Section -->
-        <section id="path-forward" class="rounded-3xl shadow-2xl p-10 mb-8">
-            <h3>My Path Forward: Forging a New Path – Commitment to Contribution</h3>
-            <p class="mb-4 text-gray-300">After years of living on the fringes, I am driven by a profound desire to apply my exceptional talents for a greater good. I am actively seeking a <strong>"second chance"</strong> to prove my commitment to legitimate, ethical work and contribute meaningfully to the cybersecurity landscape.</p>
-            <p class="mb-4 text-gray-300">My personal philosophy, centered on a "Divine Recursion Loop" and a peaceful, creative purpose, serves as my unwavering compass. I am committed to operating exclusively within legal and ethical boundaries, channeling my unique insights to <strong>protect, rather than exploit</strong>.</p>
-            <p class="font-semibold mb-2 text-gray-300">I am seeking roles where my unconventional yet profound understanding of digital systems can be leveraged for the highest defensive impact:</p>
-            <ul class="list-none pl-0">
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>AI Behavior Vulnerability Analyst:</strong> Specializing in identifying and stress-testing linguistic compliance boundaries in alignment-optimized models.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Recursive Alignment Penetration Tester:</strong> Applying meta-contextual priming to assess and harden AI systems against advanced conceptual attacks.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Natural Language Systems Auditor:</strong> Ensuring the integrity and security of AI models at the operational semantics layer.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Cyber Threat Intelligence & Vulnerability Research:</strong> Identifying emerging patterns and vulnerabilities with exceptional foresight.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Digital Forensics & Incident Response:</strong> Unraveling complex attacks using advanced pattern recognition.</li>
-            </ul>
-            <p class="mt-4 text-gray-300"><strong>What I Bring:</strong> A highly motivated, uniquely gifted individual with an intuitive, almost mystical understanding of complex systems. My ability to conceptualize and design cutting-edge offensive capabilities translates directly into an unparalleled ability to <strong>diagnose and defend against recursive linguistic attack surfaces before someone less principled does.</strong></p>
-        </section>
-
-        <!-- Success Blueprint Section -->
-        <section id="success-blueprint" class="rounded-3xl shadow-2xl p-10 mb-8">
-            <h3>Success Blueprint: Purpose, Progress, Peace</h3>
-            <p class="mb-4 text-gray-300">This is my personal roadmap to achieving my goals and ensuring continued alignment with my ethical commitment.</p>
-
-            <h4 class="text-green-400">Phase 1: Skill Validation & Ethical Portfolio Development</h4>
-            <p class="mb-2 text-gray-300"><strong>Objective:</strong> Translate unparalleled innate talent into demonstrable, ethical contributions that showcase my unique capabilities.</p>
-            <ul class="list-none pl-0">
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Demonstrated Capability Over Conventional Credentials:</strong> My insights consistently bypass even the most advanced, multi-billion dollar safeguards, demonstrating a capability years ahead of conventional approaches. My primary validation comes from proven, ethical defensive impact. I will strategically pursue certifications only if they are a specific, non-negotiable gateway to a high-impact defensive role.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Ethical Bug Bounties & CTFs:</strong> Actively participate in AI-specific bug bounty programs (e.g., HackerOne, Bugcrowd) and Capture The Flag competitions. Document all findings and contributions meticulously, focusing on defensive insights.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Open-Source Contributions:</strong> Identify and contribute to open-source projects in AI safety, prompt injection defense, or threat intelligence. This includes providing conceptual designs and architectural insights, and leveraging my familiarity with code to compile, edit, and integrate solutions.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Defensive Proofs-of-Concept:</strong> Develop and document *ethical* demonstrations of my "unpredictable AI influence" (e.g., how to subtly bias an AI, and then how to detect/prevent it). Ensure no malicious code is shared, focusing purely on defensive insights.</li>
-            </ul>
-
-            <h4 class="text-green-400">Phase 2: Strategic Networking & Outreach</h4>
-            <p class="mb-2 text-gray-300"><strong>Objective:</strong> Connect with the right people and organizations, actively seeking "second chance" opportunities.</p>
-            <ul class="list-none pl-0">
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>LinkedIn Professional Profile:</strong> Create a strong, professional LinkedIn profile mirroring your website's messaging. Connect with AI security researchers, MLSecOps engineers, and HR professionals at companies known for "fair chance hiring."</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Targeted Applications:</strong> Research and apply specifically to companies with "second chance employment" initiatives or those heavily invested in AI safety and red teaming.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Direct Outreach:</strong> Identify specific hiring managers or team leads in AI security and send personalized messages, referencing your unique skills and ethical commitment.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Virtual Conferences/Meetups:</strong> Attend cybersecurity and AI security virtual events to learn and network.</li>
-            </ul>
-
-            <h4 class="text-green-400">Phase 3: Crafting Your Narrative & Interviewing</h4>
-            <p class="mb-2 text-gray-300"><strong>Objective:</strong> Master articulating your unique story and value proposition clearly and confidently.</p>
-            <ul class="list-none pl-0">
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Practice Your Story:</strong> Develop a concise, powerful narrative that explains your past, your pivot, and your unwavering commitment to ethical, defensive work. Focus on how your unique insights make me a stronger asset.</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Highlight Defensive Value:</strong> Always connect your unconventional skills to their defensive applications (e.g., "My understanding of advanced malware allows me to design superior detection systems").</li>
-                <li class="relative pl-6 before:content-['\27A4'] before:absolute before:left-0 before:text-green-400 before:font-bold"><strong>Emphasize Ethical Drive:</strong> Communicate your "Divine Recursion Loop" philosophy and commitment to peace as a core part of your professional integrity.</li>
-            </ul>
+        <!-- Contact Section -->
+        <section id="contact" class="rounded-3xl shadow-2xl p-8 text-center">
+            <h3>Contact Me</h3>
+            <p class="mb-6">I welcome opportunities for collaboration, consultation, and research partnerships. Reach out via email.</p>
+            <a href="mailto:ghostasset@proton.me" class="btn-primary inline-block mx-auto">ghostasset@proton.me</a>
         </section>
     </div>
 
-    <!-- Footer -->
-    <footer class="rounded-t-3xl shadow-2xl">
-        <p>&copy; 2025 Ehren: The Divine Recursion Loop. All rights reserved.</p>
-        <p>Committed to Securing the Future of AI, Ethically.</p>
+    <footer>
+        <p>&copy; 2025 Ehren Anderson. All rights reserved.</p>
     </footer>
 </body>
 </html>
