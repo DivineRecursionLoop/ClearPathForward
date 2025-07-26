@@ -170,17 +170,82 @@
         .sticky-nav a:hover {
             background-color: #1a1a1a;
         }
+
+        /* Hamburger Menu Specific Styles */
+        .hamburger-menu {
+            display: none; /* Hidden by default, shown on smaller screens */
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001; /* Above the nav links */
+        }
+        .hamburger-menu .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #00e676;
+            margin: 5px auto;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav-links {
+            display: flex; /* Always display as flex for larger screens */
+            flex-direction: row;
+            width: auto;
+            background-color: transparent; /* Default for larger screens */
+            position: static; /* Default for larger screens */
+            transform: translateX(0%); /* Default for larger screens */
+        }
+
+        /* Responsive adjustments for hamburger menu */
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block; /* Show hamburger on small screens */
+            }
+            .nav-links {
+                flex-direction: column;
+                position: absolute;
+                top: 100%; /* Position below the nav bar */
+                left: 0;
+                width: 100%;
+                background-color: #0a0a0a; /* Same as nav bar */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+                transform: translateX(-100%); /* Hidden by default */
+                transition: transform 0.3s ease-in-out;
+            }
+            .nav-links.active {
+                transform: translateX(0%); /* Show when active */
+            }
+            .nav-links a {
+                padding: 1rem 1.5rem;
+                text-align: center;
+                border-bottom: 1px solid #1e1e1e; /* Separator for menu items */
+            }
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            .sticky-nav .container {
+                justify-content: space-between; /* Space out hamburger and brand if needed */
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body class="p-0 m-0">
     <nav class="sticky-nav">
-        <div class="container mx-auto flex justify-center gap-6">
-            <a href="#hero-section">Home</a>
-            <a href="#core-competencies">Skills</a>
-            <a href="https://divinerecursionloop.github.io/Abilities/" target="_blank">Abilities</a>
-            <a href="#projects">Projects</a>
-            <a href="#path-forward">Career Goals</a>
-            <a href="mailto:ghostasset@proton.me">Contact</a>
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="hamburger-menu" id="hamburger-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero-section">Home</a>
+                <a href="#core-competencies">Skills</a>
+                <a href="https://divinerecursionloop.github.io/Abilities/" target="_blank">Abilities</a>
+                <a href="#projects">Projects</a>
+                <a href="#path-forward">Career Goals</a>
+                <a href="mailto:ghostasset@proton.me">Contact</a>
+            </div>
         </div>
     </nav>
 
@@ -190,7 +255,10 @@
             <h2 class="font-medium">Protecting AI Systems with Advanced Expertise</h2>
             <p class="hero-message">I specialize in AI vulnerability discovery, secure prompt engineering, and adversarial testing. My work focuses on strengthening large language models and AI systems against advanced threats—using practical skills, creative thinking, and ethical research methods.</p>
             <div class="call-to-action mt-6 flex justify-center flex-wrap">
-                <a href="https://github.com/DivineRecursionLoop" target="_blank" class="btn-primary">GitHub Profile</a> <a href="https://divinerecursionloop.github.io/Gemini/" target="_blank" class="btn-primary">Gemini Post-Mortem</a> <a href="/ehren_resume.pdf" class="btn-secondary" download>Download Resume (PDF)</a>
+                <a href="https://github.com/DivineRecursionLoop" target="_blank" class="btn-primary">GitHub Profile</a>
+                <a href="https://divinerecursionloop.github.io/Gemini/" target="_blank" class="btn-primary">Gemini Post-Mortem</a>
+                <a href="https://divinerecursionloop.github.io/Abilities/" target="_blank" class="btn-primary">View Abilities</a>
+                <a href="/ehren_resume.pdf" class="btn-secondary" download>Download Resume (PDF)</a>
             </div>
         </div>
     </div>
@@ -255,5 +323,21 @@
     <footer>
         <p>&copy; 2025 Ehren Anderson. All rights reserved.</p>
     </footer>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked (optional, but good for UX)
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
